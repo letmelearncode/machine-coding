@@ -1,4 +1,4 @@
-# Transaction Router
+# Dynamic Transaction Routing System
 
 ## ****Description**:**
 
@@ -46,7 +46,7 @@ Design and implement a dynamic transaction routing system that can route transac
 +-------+--------+                 +-------+--------+
 | Gateway Manager|                 | Logging Service |
 +----------------+                 +-----------------+
-|
+          |
 +----------------+----------------+-----------------+
 |                |                |                 |
 |                |                |                 |
