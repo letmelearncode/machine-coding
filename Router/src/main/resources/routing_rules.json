@@ -1,0 +1,29 @@
+{
+  "routingRules": [
+    {
+      "routeId": "route1",
+      "criteria": "amount < 1000",
+      "destination": "PG1"
+    },
+    {
+      "routeId": "route2",
+      "criteria": "amount >= 1000 && amount < 5000",
+      "destination": "PG2"
+    },
+    {
+      "routeId": "route3",
+      "criteria": "amount >= 5000 && amount < 10000 && country == 'IN'",
+      "destination": "UPI"
+    },
+    {
+      "routeId": "route4",
+      "criteria": "amount >= 5000 && amount < 10000 && country != 'IN'",
+      "destination": "INTERNATIONAL_PG"
+    },
+    {
+      "routeId": "route5",
+      "criteria": "amount >= 10000",
+      "destination": "BNP"
+    }
+  ]
+}
