@@ -23,7 +23,6 @@ public class TokenBucketBasedRateLimiter implements RateLimiterService {
     long now = System.currentTimeMillis();
     long elapsedTime = now - bucket.getLastRefillTimestamp();
     int refillTokens = (int) (elapsedTime * bucket.getRefillRate()) /1000;
-    System.out.println("Available refill tokens after  :"+ elapsedTime + "ms: " + refillTokens);
     if (refillTokens > 0) {
       bucket.setTokens(Math.min(bucket.getMaxTokens(), bucket.getTokens() + refillTokens));
       bucket.setLastRefillTimestamp(now);

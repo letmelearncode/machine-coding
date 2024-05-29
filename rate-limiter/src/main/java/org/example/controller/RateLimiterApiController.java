@@ -24,10 +24,10 @@ public class RateLimiterApiController {
   @RequestMapping(path = "/resource")
   public ResponseEntity<String> getResource(@RequestParam String userId) {
     if (rateLimiter.handleRequest(userId)) {
-      logger.info("request allowed: "+ Instant.now()+" "+rateLimiter.getTokenBucket(userId));
+      logger.info("request allowed for userId : "+ userId+" at "+ Instant.now()+" "+rateLimiter.getTokenBucket(userId));
       return ResponseEntity.ok("Request allowed");
     } else {
-      logger.info("request denied: "+Instant.now()+" "+rateLimiter.getTokenBucket(userId));
+      logger.info("request denied for userId : "+ userId+" at "+Instant.now()+" "+rateLimiter.getTokenBucket(userId));
       return ResponseEntity.status(429).body("Too Many Requests");
     }
   }
