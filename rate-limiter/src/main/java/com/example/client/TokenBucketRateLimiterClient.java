@@ -1,8 +1,8 @@
-package org.example.client;
+package com.example.client;
 
 import java.util.concurrent.TimeUnit;
-import org.example.service.RateLimiterService;
-import org.example.service.TokenBucketBasedRateLimiter;
+import com.example.service.RateLimiterService;
+import com.example.service.TokenBucketBasedRateLimiter;
 
 public class TokenBucketRateLimiterClient {
 

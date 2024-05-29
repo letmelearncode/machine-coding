@@ -1,7 +1,7 @@
-package org.example.service;
+package com.example.service;
 
 import java.util.concurrent.ConcurrentHashMap;
-import org.example.model.TokenBucket;
+import com.example.model.TokenBucket;
 import org.springframework.stereotype.Service;
 
 @Service

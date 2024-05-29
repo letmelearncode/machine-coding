@@ -1,6 +1,6 @@
-package org.example.service;
+package com.example.service;
 
-import org.example.model.TokenBucket;
+import com.example.model.TokenBucket;
 
 public interface RateLimiterService {
 

@@ -1,4 +1,4 @@
-package org.example.model;
+package com.example.model;
 
 public class TokenBucket {
     private final long maxTokens;

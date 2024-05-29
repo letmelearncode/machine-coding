@@ -1,7 +1,7 @@
-package org.example.controller;
+package com.example.controller;
 
 import java.time.Instant;
-import org.example.service.RateLimiterService;
+import com.example.service.RateLimiterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
