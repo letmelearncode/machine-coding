@@ -3,14 +3,14 @@ package org.example.model;
 public class TokenBucket {
     private final long maxTokens;
     private final long refillRate; // tokens per second
-    private double tokens;
+    private long tokens;
     private long lastRefillTimestamp;
 
     public TokenBucket(long maxTokens, long refillRate) {
       this.maxTokens = maxTokens;
       this.refillRate = refillRate;
       this.tokens = maxTokens;
-      this.lastRefillTimestamp = System.nanoTime();
+      this.lastRefillTimestamp = System.currentTimeMillis();
     }
 
   public long getMaxTokens() {
@@ -21,11 +21,11 @@ public class TokenBucket {
     return refillRate;
   }
 
-  public double getTokens() {
+  public long getTokens() {
     return tokens;
   }
 
-  public void setTokens(double tokens) {
+  public void setTokens(long tokens) {
     this.tokens = tokens;
   }
 
@@ -35,5 +35,15 @@ public class TokenBucket {
 
   public void setLastRefillTimestamp(long lastRefillTimestamp) {
     this.lastRefillTimestamp = lastRefillTimestamp;
+  }
+
+  @Override
+  public String toString() {
+    return "TokenBucket: {" +
+        "maxTokens=" + maxTokens +
+        ", refillRate=" + refillRate +
+        ", tokens=" + tokens +
+        ", lastRefillTimestamp=" + lastRefillTimestamp +
+        '}';
   }
 }

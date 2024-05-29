@@ -1,6 +1,10 @@
 package org.example.service;
 
+import org.example.model.TokenBucket;
+
 public interface RateLimiterService {
 
-  String handleRequest(String userId);
+  boolean handleRequest(String userId);
+
+  TokenBucket getTokenBucket(String userId);
 }
